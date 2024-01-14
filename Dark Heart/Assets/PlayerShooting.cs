@@ -39,9 +39,9 @@ public class PlayerShooting : MonoBehaviour
         Vector2 shootDirection = shootPoint.right.normalized;
         if (Mathf.Approximately(shootDirection.x, 1.0f) && Mathf.Approximately(shootDirection.y, 0.0f))
         {
-           shootDirection = Quaternion.Euler(0, 0, 45) * shootDirection;
+           shootDirection = Quaternion.Euler(0, 0, 60) * shootDirection;
         }
-        else{ shootDirection = Quaternion.Euler(0, 0, -45) * shootDirection;}
+        else{ shootDirection = Quaternion.Euler(0, 0, -60) * shootDirection;}
 
         
         rb.velocity = shootDirection * shootForce;
