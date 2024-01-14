@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -14,7 +15,10 @@ public class PlayerMovement : MonoBehaviour
     private float dirX = 0f;
     private bool faceRight = true;
     [SerializeField] private float moveSpeed = 7f;
-    [SerializeField] private float jumpForce = 14f;
+    [SerializeField] private float jumpForce = 6f;
+
+
+    public bool death = false;
 
     private enum MovementState { idle, running, jumping, falling }
     private MovementState state;
@@ -29,6 +33,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
+
     void Update()
     {
         dirX = Input.GetAxisRaw("Horizontal");
@@ -83,4 +88,12 @@ public class PlayerMovement : MonoBehaviour
         faceRight = !faceRight;
         transform.Rotate(0f,180f,0f);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+       if(collision.gameObject.name == "DoorOpen")
+        {
+                SceneManager.LoadScene("Win");  // Chargement de la scène "jeu"
+        }
+    }
+
 }

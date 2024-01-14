@@ -8,16 +8,27 @@ public class ItemCollector : MonoBehaviour
    private int melons = 0;
 
     [SerializeField] private Text melonsText;
-
     [SerializeField] private AudioSource collectionSoundEffect;
+    [SerializeField] private AudioClip soundCollect;
+    [SerializeField] private AudioClip soundGate;
+
+    [SerializeField] private GameObject door;
+    [SerializeField] private GameObject doorOpen;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Melon"))
+        if (collision.gameObject.CompareTag("crystal"))
         {
             Destroy(collision.gameObject);
-            melons++;
-            melonsText.text = "Melon: " + melons;
+            collectionSoundEffect.PlayOneShot(soundCollect);
+            door.SetActive(false);
+            doorOpen.SetActive(true);
+            Invoke("gateOpen", 1f);
         }
+       
+    }
+    void gateOpen()
+    {
+        collectionSoundEffect.PlayOneShot(soundGate);
     }
 }

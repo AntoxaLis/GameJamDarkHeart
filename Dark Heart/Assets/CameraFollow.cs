@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraFollow : MonoBehaviour
 {
     [SerializeField] private Transform target; //The target with is followed by camera
-    [SerializeField] private float smoothSpeed = 5f; //Speed of camera
+    [SerializeField] private float smoothSpeed = 10f; //Speed of camera
     [SerializeField] private Vector2 offset = new Vector2(0, 0); //disposition of camera
-    [SerializeField]  private Vector2 deadZone = new Vector2(2f, 2f); //Zone of the cube were camera doesn't move
+    [SerializeField]  private Vector2 deadZone = new Vector2(4f, 4f); //Zone of the cube were camera doesn't move
 
     private void LateUpdate()
     {
