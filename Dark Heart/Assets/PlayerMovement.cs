@@ -16,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
+    [SerializeField] private AudioSource crystal;
+
     private enum MovementState { idle, running, jumping, falling }
 
     // Start is called before the first frame update
@@ -62,8 +64,18 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-   /* private bool IsGrounded()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
-    }*/
+        if(collision.gameObject.name == "object")
+        {
+            Destroy(collision.gameObject);
+            crystal.Play();
+        }
+      
+    }
+
+    /* private bool IsGrounded()
+     {
+         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+     }*/
 }
