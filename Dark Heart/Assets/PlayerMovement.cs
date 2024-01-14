@@ -1,10 +1,13 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+   
+
     private Rigidbody2D rb;
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
@@ -14,12 +17,19 @@ public class PlayerMovement : MonoBehaviour
 
     private float dirX = 0f;
     private bool facingRight = true;
-
+  
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
+    public AudioSource audioSource;
+    [SerializeField] private AudioClip crystalGrab;
+    [SerializeField] private AudioClip death;
+
     private enum MovementState { idle, running, jumping, falling }
     private MovementState state;
+
+
+   
 
     // Start is called before the first frame update
     private void Start()
@@ -28,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+        audioSource = gameObject.GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -85,6 +97,17 @@ public class PlayerMovement : MonoBehaviour
     {
         facingRight= !facingRight;
         transform.Rotate(0f,180f,0f);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.name == "Circle")
+        {
+            print("a laide");
+            Destroy(collision.gameObject);
+            audioSource.PlayOneShot(crystalGrab);
+
+        }
     }
 }
 
