@@ -13,7 +13,7 @@ public class Menu : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("SampleScene");       // Chargement de la scène 0
+            SceneManager.LoadScene("Show");       // Chargement de la scène 0
         }
     }
     public void quitter()
