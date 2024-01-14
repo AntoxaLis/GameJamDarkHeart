@@ -27,7 +27,7 @@ public class PlayerShooting : MonoBehaviour
     {
         GameObject projectile = Instantiate(firstProjectileType, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.velocity = transform.right * shootForce;
+        rb.velocity = shootPoint.right * shootForce;
 
     }
 
@@ -36,9 +36,15 @@ public class PlayerShooting : MonoBehaviour
         GameObject projectile = Instantiate(secondProjectileType, shootPoint.position, shootPoint.rotation);
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
 
-        Vector2 shootDirection = new Vector2(1, 1).normalized; // Adjust the direction as needed
+        Vector2 shootDirection = shootPoint.right.normalized;
+        if (Mathf.Approximately(shootDirection.x, 1.0f) && Mathf.Approximately(shootDirection.y, 0.0f))
+        {
+           shootDirection = Quaternion.Euler(0, 0, 45) * shootDirection;
+        }
+        else{ shootDirection = Quaternion.Euler(0, 0, -45) * shootDirection;}
+
+        
         rb.velocity = shootDirection * shootForce;
 
-        // Optionally, you can add additional logic here for the parabolic trajectory
     }
 }

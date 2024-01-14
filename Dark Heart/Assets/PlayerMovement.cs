@@ -13,6 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask jumpableGround;
 
     private float dirX = 0f;
+    private bool facingRight = true;
+
     [SerializeField] private float moveSpeed = 7f;
     [SerializeField] private float jumpForce = 14f;
 
@@ -34,10 +36,11 @@ public class PlayerMovement : MonoBehaviour
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
-         if (dirX == 0 && IsGrounded())
+
+        /*if (dirX == 0 && IsGrounded())
         {
             rb.velocity = new Vector2(rb.velocity.x * 0.9f, rb.velocity.y);
-        }
+        }*/
 
         if (Input.GetButtonDown("Jump") && IsGrounded())
         {
@@ -49,15 +52,12 @@ public class PlayerMovement : MonoBehaviour
 
     private void UpdateAnimationState()
     {
-    if (dirX > 0f)
+    if (dirX != 0f )
     {
         state = MovementState.running;
-        sprite.flipX = false;
-    }
-    else if (dirX < 0f)
-    {
-        state = MovementState.running;
-        sprite.flipX = true;
+        if(dirX > 0 && !facingRight){Turn();}
+        else if (dirX < 0 && facingRight){Turn();}
+
     }
     else
     {
@@ -79,6 +79,12 @@ public class PlayerMovement : MonoBehaviour
       private bool IsGrounded()
     {
         return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
+    }
+
+    private void Turn()
+    {
+        facingRight= !facingRight;
+        transform.Rotate(0f,180f,0f);
     }
 }
 
