@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -118,19 +118,6 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 0
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
     buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -152,7 +139,7 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,9 +158,9 @@ TextureImporter:
       name: Brown On (32x8)_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 16
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -192,9 +179,9 @@ TextureImporter:
       name: Brown On (32x8)_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 32
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -213,9 +200,9 @@ TextureImporter:
       name: Brown On (32x8)_3
       rect:
         serializedVersion: 2
-        x: 96
+        x: 48
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -234,9 +221,9 @@ TextureImporter:
       name: Brown On (32x8)_4
       rect:
         serializedVersion: 2
-        x: 128
+        x: 64
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -255,9 +242,9 @@ TextureImporter:
       name: Brown On (32x8)_5
       rect:
         serializedVersion: 2
-        x: 160
+        x: 80
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -276,9 +263,9 @@ TextureImporter:
       name: Brown On (32x8)_6
       rect:
         serializedVersion: 2
-        x: 192
+        x: 96
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -297,9 +284,9 @@ TextureImporter:
       name: Brown On (32x8)_7
       rect:
         serializedVersion: 2
-        x: 224
+        x: 112
         y: 0
-        width: 32
+        width: 16
         height: 8
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -310,6 +297,174 @@ TextureImporter:
       bones: []
       spriteID: 11319983793eba34b92fa0b4a7ca6a6f
       internalID: -7345710839297778315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_8
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25065e4acd7007f4b950c68887bd5b58
+      internalID: -402569127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_9
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0441695e21517b4ab608edee22a55a2
+      internalID: -2000049853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_10
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c56614a8e0dfe44482b4671614e79ab
+      internalID: 1117858829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_11
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d104b16688fc214595f5c2987a8e589
+      internalID: -1133742227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9438376f30ed34b9fbb51f6e89ced4
+      internalID: 1511072725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d793e1fd56b793247847ed2545b9966d
+      internalID: 893551195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_14
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da1dce9256ff3134fad58cd3ce84a7f6
+      internalID: -99508709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brown On (32x8)_15
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 16
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c45ac4337f01d64fab5d0fa2d80674d
+      internalID: -2141988611
       vertices: []
       indices: 
       edges: []
@@ -327,12 +482,20 @@ TextureImporter:
     nameFileIdTable:
       Brown On (32x8)_0: -3932816638193255715
       Brown On (32x8)_1: 113249620649802049
+      Brown On (32x8)_10: 1117858829
+      Brown On (32x8)_11: -1133742227
+      Brown On (32x8)_12: 1511072725
+      Brown On (32x8)_13: 893551195
+      Brown On (32x8)_14: -99508709
+      Brown On (32x8)_15: -2141988611
       Brown On (32x8)_2: -3965723481977160693
       Brown On (32x8)_3: -8422671310359681190
       Brown On (32x8)_4: 6027122724756182200
       Brown On (32x8)_5: 3059113826426795209
       Brown On (32x8)_6: 4722360788381041880
       Brown On (32x8)_7: -7345710839297778315
+      Brown On (32x8)_8: -402569127
+      Brown On (32x8)_9: -2000049853
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
