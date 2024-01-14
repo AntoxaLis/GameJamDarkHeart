@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class MouseLossCondition : MonoBehaviour
 {
@@ -50,9 +51,8 @@ public class MouseLossCondition : MonoBehaviour
         {
 
             Debug.Log("Loss");
-
             canvas.SetActive(true);
-
+            SceneManager.LoadScene("GameOver");  // Chargement de la scène "jeu"
         }
 
     }

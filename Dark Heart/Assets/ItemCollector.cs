@@ -25,7 +25,6 @@ public class ItemCollector : MonoBehaviour
             doorOpen.SetActive(true);
             Invoke("gateOpen", 1f);
         }
-       
     }
     void gateOpen()
     {
